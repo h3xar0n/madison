@@ -1,16 +1,14 @@
-var main = function() {
+$(document).ready(function() {
   $('.cart').click(function(){
-    $('.cart .dropdown-menu').show();
+    $(this).find('.dropdown-menu').fadeToggle();
     $('.account .dropdown-menu, .help .dropdown-menu').hide();
   });
   $('.account').click(function(){
-    $('.account .dropdown-menu').show();
+    $(this).find('.dropdown-menu').fadeToggle();
     $('.cart .dropdown-menu, .help .dropdown-menu').hide();
   });
   $('.help').click(function(){
-    $('.help .dropdown-menu').show();
+    $(this).find('.dropdown-menu').fadeToggle();
     $('.cart .dropdown-menu, .account .dropdown-menu').hide();
   });
-};
-
-$(document).ready(main);
+});
